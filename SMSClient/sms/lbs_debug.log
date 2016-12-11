@@ -1,0 +1,24 @@
+2016-07-24 8:49:52 - DEBUG --> Received msisdn = tel:94771122336 
+2016-07-24 8:49:53 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-07-24 12:19:52","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1469342992665","version":"1.0"} 
+2016-07-24 8:50:26 - DEBUG --> Received msisdn = tel:94771122336 
+2016-07-24 8:50:27 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-07-24 12:20:27","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1469343027131","version":"1.0"} 
+2016-07-24 8:51:46 - DEBUG --> Received msisdn = tel:94771122336 
+2016-07-24 8:51:47 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-07-24 12:21:47","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1469343107172","version":"1.0"} 
+2016-07-24 8:56:33 - DEBUG --> Received msisdn = tel:94771122336 
+2016-07-24 8:56:34 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-07-24 12:26:34","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1469343394105","version":"1.0"} 
+2016-07-24 8:57:40 - DEBUG --> Received msisdn = tel:94771122336 
+2016-07-24 8:57:40 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-07-24 12:27:40","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1469343460773","version":"1.0"} 
+2016-07-24 8:59:08 - DEBUG --> Received msisdn = tel:94771122336 
+2016-07-24 8:59:08 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-07-24 12:29:08","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1469343548704","version":"1.0"} 
+2016-07-24 9:01:47 - DEBUG --> Received msisdn = tel:94771122336 
+2016-07-24 9:01:48 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-07-24 12:31:48","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1469343708231","version":"1.0"} 
+2016-07-24 9:21:53 - DEBUG --> Received msisdn = tel:94771122336 
+2016-07-24 9:21:53 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-07-24 12:51:53","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1469344913449","version":"1.0"} 
+2016-07-24 9:22:38 - DEBUG --> Received msisdn = tel:94771122336 
+2016-07-24 9:22:38 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-07-24 12:52:38","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1469344958736","version":"1.0"} 
+2016-07-24 9:23:39 - DEBUG --> Received msisdn = tel:94771122336 
+2016-07-24 9:23:39 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-07-24 12:53:39","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1469345019227","version":"1.0"} 
+2016-11-04 6:00:31 - DEBUG --> Received msisdn = tel:94771122336 
+2016-11-04 6:00:32 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-11-04 10:30:32","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1478235632349","version":"1.0"} 
+2016-11-04 6:00:36 - DEBUG --> Received msisdn = tel:94771122336 
+2016-11-04 6:00:36 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-11-04 10:30:36","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1478235636709","version":"1.0"} 
