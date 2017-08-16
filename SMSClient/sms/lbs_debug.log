@@ -22,3 +22,11 @@
 2016-11-04 6:00:32 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-11-04 10:30:32","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1478235632349","version":"1.0"} 
 2016-11-04 6:00:36 - DEBUG --> Received msisdn = tel:94771122336 
 2016-11-04 6:00:36 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2016-11-04 10:30:36","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1478235636709","version":"1.0"} 
+2017-01-09 7:26:05 - DEBUG --> Received msisdn = tel:94771122336 
+2017-01-09 7:26:06 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2017-01-09 11:56:06","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1483943166043","version":"1.0"} 
+2017-01-09 7:27:52 - DEBUG --> Received msisdn = tel:94771122336 
+2017-01-09 7:27:53 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2017-01-09 11:57:53","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1483943273053","version":"1.0"} 
+2017-01-09 7:28:47 - DEBUG --> Received msisdn = tel:94771122336 
+2017-01-09 7:28:47 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2017-01-09 11:58:47","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1483943327424","version":"1.0"} 
+2017-01-09 7:29:36 - DEBUG --> Received msisdn = tel:94771122336 
+2017-01-09 7:29:36 - DEBUG --> Lbs response:{"statusCode":"S1000","timeStamp":"2017-01-09 11:59:36","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1483943376907","version":"1.0"} 

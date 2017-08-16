@@ -132,7 +132,7 @@ public class Nearby_Accidents extends FragmentActivity implements OnMapReadyCall
             //Start the data part
             try{
 
-                String link = "http://icts.stcmount.edu.lk/saveme/client.php?task=nearby&location="+Uri.encode(location);
+                String link = "http://projects.stcicts.org/saveme/client.php?task=nearby&location="+Uri.encode(location);
                 URL url = new URL(link);
                 HttpClient client = new DefaultHttpClient();
                 HttpGet request = new HttpGet();

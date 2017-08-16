@@ -242,7 +242,7 @@ public class WeatherAlerts extends AppCompatActivity implements LocationListener
 
             try{
 
-                String link = "http://icts.stcmount.edu.lk/saveme/client.php?task=weather&lat="+Uri.encode(latitude)+"&longlat="+Uri.encode(longlatitude);
+                String link = "http://projects.stcicts.org/saveme/client.php?task=weather&lat="+Uri.encode(latitude)+"&longlat="+Uri.encode(longlatitude);
                 URL url = new URL(link);
                 HttpClient client = new DefaultHttpClient();
                 HttpGet request = new HttpGet();

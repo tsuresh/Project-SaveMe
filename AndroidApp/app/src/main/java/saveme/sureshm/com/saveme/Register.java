@@ -94,7 +94,7 @@ public class Register extends AppCompatActivity {
             String regnic =  params[3];
 
             try{
-                String link = "http://icts.stcmount.edu.lk/saveme/client.php?task=register&fname="+Uri.encode(regfname)+"&username="+Uri.encode(regemail)+"&password="+Uri.encode(regpass)+"&nic="+Uri.encode(regnic);
+                String link = "http://projects.stcicts.org/saveme/client.php?task=register&fname="+Uri.encode(regfname)+"&username="+Uri.encode(regemail)+"&password="+Uri.encode(regpass)+"&nic="+Uri.encode(regnic);
                 URL url = new URL(link);
                 HttpClient client = new DefaultHttpClient();
                 HttpGet request = new HttpGet();

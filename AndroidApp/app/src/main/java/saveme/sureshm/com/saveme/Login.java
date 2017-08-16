@@ -1,16 +1,20 @@
 package saveme.sureshm.com.saveme;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,12 +52,33 @@ public class Login extends AppCompatActivity {
     TextView signuplink;
     private GoogleApiClient client;
 
+    private static final int MY_PERMISSIONS_REQUEST_COARSE_LOC = 1;
+    private static final int MY_PERMISSIONS_REQUEST_FINE_LOC = 2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         SharedPreferences sp = getSharedPreferences("Login", 0);
         String reporter = sp.getString("username", null);
+
+        // Request coarse location
+        /*
+        if (ContextCompat.checkSelfPermission(Login.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(Login.this, Manifest.permission.ACCESS_COARSE_LOCATION)) {
+            } else {
+                ActivityCompat.requestPermissions(Login.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, MY_PERMISSIONS_REQUEST_COARSE_LOC);
+            }
+        }
+
+        // Request fine location
+        if (ContextCompat.checkSelfPermission(Login.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(Login.this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+            } else {
+                ActivityCompat.requestPermissions(Login.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_FINE_LOC);
+            }
+        }
+        */
 
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
@@ -180,7 +205,7 @@ public class Login extends AppCompatActivity {
             String password_in = params[1];
 
             try {
-                String link = "http://icts.stcmount.edu.lk/saveme/client.php?task=login&username=" + Uri.encode(email_in) + "&password=" + Uri.encode(password_in);
+                String link = "http://projects.stcicts.org/saveme/client.php?task=login&username=" + Uri.encode(email_in) + "&password=" + Uri.encode(password_in);
                 URL url = new URL(link);
                 HttpClient client = new DefaultHttpClient();
                 HttpGet request = new HttpGet();

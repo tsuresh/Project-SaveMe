@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SaveMe</string>
+    <string name="app_name">Crisis Call</string>
     <string name="gps_network_not_enabled">GPS Service is not enabled</string>
     <string name="open_location_settings">Open location settings</string>
     <string name="Cancel">Cancel</string>

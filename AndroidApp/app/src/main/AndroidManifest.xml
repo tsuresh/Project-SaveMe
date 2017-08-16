@@ -4,10 +4,15 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +20,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name="app.akexorcist.bluetoothspp.DeviceList" />
         <activity
             android:name=".Login"
@@ -29,6 +35,8 @@
             android:name=".Register"
             android:theme="@style/AppTheme.Dark" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".DecoderActivity" />
+        <activity android:name=".PointsOverlayView" />
         <activity
             android:name=".EditProfile"
             android:theme="@style/AppTheme.Dark" />

@@ -34,8 +34,14 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
+
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 
@@ -50,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     public Criteria criteria;
     public String bestProvider;
 
+    private static final int QR_RESULT_CODE = 0;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -73,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             finish();
 
         } else if(item.getTitle().equals("Website")){
-            String url = "http://icts.stcmount.edu.lk/saveme/";
+            String url = "http://projects.stcicts.org/crisiscall";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
             startActivity(i);
@@ -164,23 +171,27 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         thief.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final CharSequence[] items = {"Report to SaveMe", "Call a relative", "Start the thief siren"};
+                final CharSequence[] items = {"Report to CrisisCall", "Call a relative", "Start the thief siren"};
                 AlertDialog.Builder dbuilder = new AlertDialog.Builder(MainActivity.this);
                 dbuilder.setTitle("Report a Thief");
                 dbuilder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dg, int item) {
                         switch (item){
                             case 0:
+
                                 report("","","","thief","","");
                                 break;
+
                             case 1:
+
                                 SharedPreferences sp = getSharedPreferences("Login", 0);
                                 String emnum = sp.getString("emergencyno", "");
                                 Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + emnum));
                                 startActivity(intent);
                                 break;
+
                             case 2:
-                                //Coulde be intergrated with a Burglar Siren System
+
                                 Toast.makeText(getApplicationContext(), "Thief alert can be intergrated here",Toast.LENGTH_LONG).show();
                                 break;
                         }
@@ -217,7 +228,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         road.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final CharSequence[] items = {"Report via SaveMe Card", "Enter Persons name", "Enter the NIC Number", "Send me Location"};
+                final CharSequence[] items = {"Report via CC Card", "Enter Persons name", "Enter the NIC Number", "Send me Location"};
                 AlertDialog.Builder dbuilder = new AlertDialog.Builder(MainActivity.this);
                 dbuilder.setTitle("Report a Vehicle Accident");
                 dbuilder.setItems(items, new DialogInterface.OnClickListener() {
@@ -225,9 +236,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                         switch(item){
                             case 0:
 
-                                Intent intent = new Intent("com.google.zxing.client.android.SCAN");
-                                intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
-                                startActivityForResult(intent, 0);
+                                Intent myIntent = new Intent(MainActivity.this, DecoderActivity.class);
+                                startActivityForResult(myIntent, QR_RESULT_CODE);
 
                                 break;
                             case 1:
@@ -330,19 +340,17 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        if (requestCode == 0) {
+        if (requestCode == QR_RESULT_CODE) {
             if (resultCode == RESULT_OK) {
-                String contents = intent.getStringExtra("SCAN_RESULT"); // This will contain your scan result
+                String contents = intent.getStringExtra("qrCode"); // This will contain your scan result
                 qrcode = contents;
                 report(contents, "", "", "road","","");
             }
         }
     }
 
-
     //reporting function
     public void report(String scard, String nic, String name, String type, String disaster, String howhelp) {
-
         //Get info
         SharedPreferences sp = MainActivity.this.getSharedPreferences("Login", 0);
         String reporter = sp.getString("username", "email");
@@ -469,7 +477,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
             try{
 
-                String link = "http://icts.stcmount.edu.lk/saveme/client.php?task=report&reporter="+Uri.encode(g_reporter)+"&hash="+Uri.encode(g_reporterhash)+"&savecard="+Uri.encode(g_savemecard)+"&nic="+Uri.encode(g_nic)+"&name="+Uri.encode(g_nane)+"&location="+Uri.encode(g_location)+"&type="+Uri.encode(g_type)+"&disaster="+Uri.encode(g_disaster)+"&howhelp="+Uri.encode(g_howhelp);
+                String link = "http://projects.stcicts.org/saveme/client.php?task=report&reporter="+Uri.encode(g_reporter)+"&hash="+Uri.encode(g_reporterhash)+"&savecard="+Uri.encode(g_savemecard)+"&nic="+Uri.encode(g_nic)+"&name="+Uri.encode(g_nane)+"&location="+Uri.encode(g_location)+"&type="+Uri.encode(g_type)+"&disaster="+Uri.encode(g_disaster)+"&howhelp="+Uri.encode(g_howhelp);
                 URL url = new URL(link);
                 HttpClient client = new DefaultHttpClient();
                 HttpGet request = new HttpGet();

@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="© 2016 - Project SaveMe\n\nDeveloped by,\nSURESH PEIRIS\nCHANUKA GURUSINGHE\nBHAGYA FERNANDO\n\nOpen Sources,\nAndroid Studio\nGoogle Maps API\nArduino"
+        android:text="© 2017 - Project Crisis Call\n\nDeveloped by,\nSURESH PEIRIS\nCHANUKA GURUSINGHE\nKUSHAN BHARETI\nDILINA DE SILVA\n\nOpen Sources,\nAndroid Studio\nGoogle Maps API\nArduino"
         android:textColor="#fff"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceMedium"/>

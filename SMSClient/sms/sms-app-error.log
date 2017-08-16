@@ -52,3 +52,20 @@ Stack trace:
 #0 C:\wamp\www\newsaveme\SMSClient\sms\smsclient.php(15): SmsReceiver->__construct()
 #1 {main}
   thrown in C:\wamp\www\newsaveme\SMSClient\lib\sms\SmsReceiver.php on line 37
+[09-Jan-2017 07:22:53 Europe/Paris] PHP Fatal error:  Uncaught exception 'Exception' with message 'Some of the required parameters are not provided' in C:\wamp\www\newsaveme\SMSClient\lib\sms\SmsReceiver.php:37
+Stack trace:
+#0 C:\wamp\www\newsaveme\SMSClient\sms\smsclient.php(15): SmsReceiver->__construct()
+#1 {main}
+  thrown in C:\wamp\www\newsaveme\SMSClient\lib\sms\SmsReceiver.php on line 37
+[09-Jan-2017 07:26:07 Europe/Paris] PHP Fatal error:  Call to undefined function logFile() in C:\wamp\www\newsaveme\SMSClient\sms\smsclient.php on line 114
+[09-Jan-2017 07:26:07 Europe/Paris] PHP Stack trace:
+[09-Jan-2017 07:26:07 Europe/Paris] PHP   1. {main}() C:\wamp\www\newsaveme\SMSClient\sms\smsclient.php:0
+[09-Jan-2017 07:27:54 Europe/Paris] PHP Fatal error:  Call to undefined function logFile() in C:\wamp\www\newsaveme\SMSClient\sms\smsclient.php on line 114
+[09-Jan-2017 07:27:54 Europe/Paris] PHP Stack trace:
+[09-Jan-2017 07:27:54 Europe/Paris] PHP   1. {main}() C:\wamp\www\newsaveme\SMSClient\sms\smsclient.php:0
+[09-Jan-2017 07:28:49 Europe/Paris] PHP Fatal error:  Call to undefined function logFile() in C:\wamp\www\newsaveme\SMSClient\sms\smsclient.php on line 114
+[09-Jan-2017 07:28:49 Europe/Paris] PHP Stack trace:
+[09-Jan-2017 07:28:49 Europe/Paris] PHP   1. {main}() C:\wamp\www\newsaveme\SMSClient\sms\smsclient.php:0
+[09-Jan-2017 07:29:38 Europe/Paris] PHP Fatal error:  Call to undefined function logFile() in C:\wamp\www\newsaveme\SMSClient\sms\smsclient.php on line 114
+[09-Jan-2017 07:29:38 Europe/Paris] PHP Stack trace:
+[09-Jan-2017 07:29:38 Europe/Paris] PHP   1. {main}() C:\wamp\www\newsaveme\SMSClient\sms\smsclient.php:0
